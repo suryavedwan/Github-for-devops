@@ -1,3 +1,5 @@
+"""Generate metrics for 40 students with intentional data errors."""
+
 import random
 
 students = []
@@ -7,7 +9,7 @@ for i in range(1, 41):
     marks = random.randint(35, 100)
     students.append(marks)
 
-# Add 2–3 intentional errors
+# Add 3 intentional errors
 students[5] = -10        # Invalid negative marks
 students[15] = 120       # Marks above 100
 students[25] = "Absent"  # Wrong data type
@@ -16,4 +18,4 @@ students[25] = "Absent"  # Wrong data type
 print("Student Metrics (Marks):\n")
 
 for i in range(40):
-    print(f"Student {i+1}: {students[i]}")
+    print(f"Student {i + 1}: {students[i]}")
